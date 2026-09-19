@@ -1078,6 +1078,7 @@ async function startServer() {
     require("./workers/contentPublishWorker").startContentPublishWorker();
     require("./workers/scheduledNotificationWorker").startScheduledNotificationWorker();
     require("./workers/taskReminderWorker").startTaskReminderWorker();
+    require("./services/taskCollabService").startRecurrenceWorker();
   } catch (error) {
     console.error("❌ Failed to start the application:", error);
     process.exit(1);
